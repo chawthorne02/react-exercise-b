@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid'
 
 
 
-function Form(addPerson) {
+function Form({addPerson}) {
     const [firstName, setFirstName] = useState('');
     const[lastName, setLastName] = useState('');
     const[address, setAddress] = useState('');
@@ -44,7 +44,7 @@ function Form(addPerson) {
 
 
 return (
-  <form>
+  <form onSubmit={handleSubmit}>
     <label htmlFor=""></label>
     <input value={firstName} type='firstName' name="firstName" placeholder="First Name..." autoComplete="off" onChange={handleFirstName}></input>
     <input value={lastName} type='lastName' name="lastName" placeholder="Last Name..." autoComplete="off" onChange={handleLastName}></input>
